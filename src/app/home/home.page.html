@@ -1,20 +1,42 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-        <img src="../../assets/imgs/educared-logo.png" class="logo-header-ed" alt="Logo Educared">
+      <img src="../../assets/imgs/educared-logo.png" class="logo-header-ed" alt="Logo Educared">
     </ion-title>
-    <ion-title  slot="end">
-        <img src="../../assets/imgs/logo-movistar.png" class="" alt="">
+    <ion-title slot="end">
+      <img src="../../assets/imgs/logo-movistar.png" class="" alt="">
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content [fullscreen]="true" no-bounce>
 
-<ion-content [fullscreen]="true">
 
 
-  <div class="iframe-container">
-    <iframe src="http://localhost:8100/assets/scorm/personalsocial/genially.html"  width="100%" height="500" sandbox="allow-scripts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+
+  <div class="container-home">
+    <!-- <div class="c-header-scorm">
+      <div class="title-flex">
+        <h6><span class="state-flex">Estado: <ion-icon name="ellipse" [ngClass]="{
+          'green': serviceNetwork.networkStatus,
+          'yellow': !serviceNetwork.networkStatus
+        }" class="circle-icon"></ion-icon> <b>{{serviceNetwork.networkStatus ? 'Con conexión' : 'Sin conexión'}}</b>
+          </span></h6>
+      </div>
+    </div> -->
+    <div class="banner-home">
+      <img src="assets/imgs/banner-home.jpg" alt="" class="banner-img-home">
+    </div>
+
+
+    <ion-button [routerLink]="['/matematica']" expand="block" class="left-aligned-button"> <ion-icon name="calculator-outline"
+        slot="start"></ion-icon>Matematica</ion-button>
+    <ion-button [routerLink]="['/comunicaciones']" expand="block"> <ion-icon name="list-circle-outline"
+        slot="start"></ion-icon>Comunicación</ion-button>
+    <ion-button [routerLink]="['/personalsocial']" expand="block"><ion-icon name="people-circle-outline"
+        slot="start"></ion-icon>Personal Social</ion-button>
+    <ion-button [routerLink]="['/ciencia']" expand="block"><ion-icon name="flask-outline"
+        slot="start"></ion-icon>Ciencia</ion-button>
   </div>
 
- 
+
 </ion-content>

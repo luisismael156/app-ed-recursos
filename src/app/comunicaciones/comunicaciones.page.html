@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <img src="../../assets/imgs/educared-logo.png" class="logo-header-ed" alt="Logo Educared">
+    </ion-title>
+    <ion-title slot="end">
+      <img src="../../assets/imgs/logo-movistar.png" class="" alt="">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="c-header-scorm">
+    <div class="title-flex">
+      <h6><span class="state-flex">Estado: <ion-icon name="ellipse" [ngClass]="{
+        'green': serviceNetwork.networkStatus,
+        'yellow': !serviceNetwork.networkStatus
+      }" class="circle-icon"></ion-icon> <b>{{serviceNetwork.networkStatus ? 'Con conexión' : 'Sin conexión'}}</b> </span></h6>
+    </div>
+    
+    <ion-button [routerLink]="['/']" expand="block" size="small" class="ed-primary ">
+       <ion-icon slot="start"
+        name="home-outline"></ion-icon>
+      <b>Inicio</b></ion-button>
+  </div>
+
+
+
+  <div class="iframe-container online" *ngIf="serviceNetwork.networkStatus">
+
+    <iframe src="assets/scorm/online/comunicaciones/index.html" width="100%" height="600" sandbox="allow-scripts"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy"
+      allowfullscreen
+      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+  </div>
+  <div class="iframe-container offline" *ngIf="!serviceNetwork.networkStatus">
+    <iframe src="assets/scorm/offline/comunicaciones/index.html" width="100%" height="500" sandbox="allow-scripts"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy"
+      allowfullscreen
+      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+  </div>
+
+
+</ion-content>
