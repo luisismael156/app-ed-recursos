@@ -19,8 +19,7 @@
     </div>
     
     <ion-button [routerLink]="['/']" expand="block" size="small" class="ed-primary ">
-       <ion-icon slot="start"
-        name="home-outline"></ion-icon>
+       <img src="assets/icon/btn-home.png" alt="Icono boton home" class="icon-home">
       <b>Inicio</b></ion-button>
   </div>
 
@@ -28,14 +27,17 @@
 
   <div class="iframe-container online" *ngIf="serviceNetwork.networkStatus">
 
-    <iframe src="assets/scorm/online/matematica/index.html" width="100%" height="600" sandbox="allow-scripts allow-popups allow-top-navigation"
-      frameborder="0" loading="lazy"
+    <iframe src="https://view.genial.ly/64d817b5d93c31001203b0ca" width="100%" height="600"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy"
+    allowfullscreen
+    sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
       
       ></iframe>
   </div>
   <div class="iframe-container offline" *ngIf="!serviceNetwork.networkStatus">
     <iframe src="assets/scorm/offline/matematica/index.html" width="100%" height="600" sandbox="allow-scripts allow-popups allow-top-navigation"
-      frameborder="0" loading="lazy"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy"
+    allowfullscreen
+    sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
       
       ></iframe>
   </div>

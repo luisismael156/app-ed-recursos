@@ -54,14 +54,19 @@
   }
 }
 .container-home{
-    padding: 0 25px;
-    background-image: url(assets/imgs/bg-home.jpg);
-    background-size: cover;
-    height: 100%;
-    padding-top: 1px;
+
+    padding: 0 30px;
+
+}
+
+.bg-home{
+  --background: #fff url(assets/imgs/bg-home.jpg) no-repeat center center / cover;
+}
+.wrapper-home{
+  margin: 25px 0;
 }
 .banner-img-home{
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
     display: block;
     margin:  0 auto;
@@ -77,4 +82,15 @@
   }
   .logo-header-ed{
     width: 100px;
+  }
+  .icon-home
+  {
+    height: auto;
+    max-width: 100%;
+    width: 20px;
+    margin-right: 9px;
+  }
+  .btn-home-cursos{
+    margin-bottom: 10px;
+    display: block;
   }

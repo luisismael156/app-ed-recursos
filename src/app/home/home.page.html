@@ -8,7 +8,7 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true" no-bounce>
+<ion-content [fullscreen]="true" no-bounce class="bg-home">
 
 
 
@@ -23,19 +23,26 @@
           </span></h6>
       </div>
     </div> -->
-    <div class="banner-home">
-      <img src="assets/imgs/banner-home.jpg" alt="" class="banner-img-home">
+    <div class="wrapper-home">
+      <div class="banner-home">
+        <img src="assets/imgs/banner-home.png" alt="" class="banner-img-home">
+      </div>
+  
+      <a [routerLink]="['/matematica']" class="btn-home-cursos">
+        <img src="assets/imgs/btn-matematica.png" alt="">
+      </a>
+      <a [routerLink]="['/comunicaciones']" class="btn-home-cursos">
+        <img src="assets/imgs/btn-comunicacion.png" alt="">
+      </a>
+      <a [routerLink]="['/personalsocial']" class="btn-home-cursos">
+        <img src="assets/imgs/btn-personal.png" alt="">
+      </a>
+      <a [routerLink]="['/ciencia']" class="btn-home-cursos">
+        <img src="assets/imgs/btn-ciencia.png" alt="">
+      </a>
     </div>
-
-
-    <ion-button [routerLink]="['/matematica']" expand="block" class="left-aligned-button"> <ion-icon name="calculator-outline"
-        slot="start"></ion-icon>Matematica</ion-button>
-    <ion-button [routerLink]="['/comunicaciones']" expand="block"> <ion-icon name="list-circle-outline"
-        slot="start"></ion-icon>Comunicación</ion-button>
-    <ion-button [routerLink]="['/personalsocial']" expand="block"><ion-icon name="people-circle-outline"
-        slot="start"></ion-icon>Personal Social</ion-button>
-    <ion-button [routerLink]="['/ciencia']" expand="block"><ion-icon name="flask-outline"
-        slot="start"></ion-icon>Ciencia</ion-button>
+  
+   
   </div>
 
 

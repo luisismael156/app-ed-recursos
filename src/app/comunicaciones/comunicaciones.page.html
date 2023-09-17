@@ -19,8 +19,7 @@
     </div>
     
     <ion-button [routerLink]="['/']" expand="block" size="small" class="ed-primary ">
-       <ion-icon slot="start"
-        name="home-outline"></ion-icon>
+      <img src="assets/icon/btn-home.png" alt="Icono boton home" class="icon-home">
       <b>Inicio</b></ion-button>
   </div>
 
@@ -28,16 +27,14 @@
 
   <div class="iframe-container online" *ngIf="serviceNetwork.networkStatus">
 
-    <iframe src="assets/scorm/online/comunicaciones/index.html" width="100%" height="600" sandbox="allow-scripts"
-      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy"
-      allowfullscreen
-      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+    <iframe src="https://view.genial.ly/64df7ea15175ac00187eb940" width="100%" height="600"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy"
+    allowfullscreen
+    sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
   </div>
   <div class="iframe-container offline" *ngIf="!serviceNetwork.networkStatus">
-    <iframe src="assets/scorm/offline/comunicaciones/index.html" width="100%" height="500" sandbox="allow-scripts"
-      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy"
-      allowfullscreen
-      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+    <iframe src="assets/scorm/offline/comunicaciones/index.html" width="100%" height="600"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy"
+    allowfullscreen
+    sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
   </div>
 
 
